@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha conteúdo ao topo */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #107533);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 10px; /* Adicionado para espaçamento interno */
+}
+
+.login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 20px; /* Margem superior reduzida */
+    margin-bottom: 20px; /* Margem inferior adicionada */
+}
+
+.login-box .logo {
+    display: block;
+    margin: 0 auto 5px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.login-box legend {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    background: #f7f7f7;
+    border: none;
+    padding: 8px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    background: #e2e2e2;
+}
+
+.divider {
+    border-bottom: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #6e8efb;
+}
+
+.btn-primary:hover {
+    background-color: #a777e3;
+}
+
+.btn-secondary {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+}

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #62c4d1;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.login-options {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.cortana {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.option {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.2s;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+.option i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.option span {
+    display: block;
+    font-size: 18px;
+    color: #333;
+}
+
+.login-panel {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
