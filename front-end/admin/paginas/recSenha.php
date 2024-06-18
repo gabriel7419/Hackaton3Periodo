@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <main class="login-box">
+    <div class="d-flex justify-content-center">
+      <div class="imagem1">
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="login rounded-5 d-flex justify-content-center align-items-center">
+        <form class="mt-3">
+          <div class="mb-3">
+            <legend class="text-center">Redefinir senha</legend> 
+            <div id="emailHelp" class="form-text text-center">Digite seu email no campo abaixo e te <br>enviaremos uma nova senha</div>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="@mail.com">
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary" onclick="newPopup()">Enviar Nova Senha</button>
+            <button type="button" class="btn btn-secondary btn-lg" onclick="goBack()">Voltar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</body>
+<script>
+    function newPopup() {
+      var width = 600;
+      var height = 400;
+      var left = (screen.width / 2) - (width / 2);
+      var top = (screen.height / 2) - (height / 2);
+
+      var popup = window.open('popup/popup.html', 'popup', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+      if (popup) {
+        popup.focus();
+      } else {
+        alert('Popup blocked. Please allow popups for this website.');
+      }
+    }
+
+    function goBack() {
+      window.location.href = 'login.html';
+    }
+</script>
+</html>
