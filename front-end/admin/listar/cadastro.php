@@ -116,7 +116,7 @@
         }
 
         function formatarCPF(cpfInput) {
-            let cpf = cpfInput.value.replace(/\D/g, ''); // Remove tudo o que não é dígito
+            let cpf = cpfInput.value.replace(/\D/g, '');
             if (cpf.length > 11) {
                 cpf = cpf.substring(0, 11);
             }
