@@ -13,24 +13,32 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img src="../imagens/logoprincipal.png" alt="Logo do Site">
-        </div>
-        <div class="login-options" onclick="toggleLoginPanel()">
-            <i class="fas fa-sign-in-alt"></i> Login
-            <div class="login-panel" id="loginPanel">
-                <!-- Formulário de Login -->
-                <form action="login.php" method="POST">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <div class="logo">
+                        <img src="../imagens/logoprincipal.png" alt="Logo do Site">
                     </div>
-                    <div class="mb-3">
-                        <label for="senha" class="form-label">Senha:</label>
-                        <input type="password" class="form-control" id="senha" name="senha" required>
+                </div>
+                <div class="col-auto ms-auto">
+                    <div class="login-options" onclick="toggleLoginPanel()">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                        <div class="login-panel" id="loginPanel">
+                            <!-- Formulário de Login -->
+                            <form action="login.php" method="POST">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="senha" class="form-label">Senha:</label>
+                                    <input type="password" class="form-control" id="senha" name="senha" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </form>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                </form>
+                </div>
             </div>
         </div>
     </header>
@@ -76,25 +84,41 @@
         </div>
     </div>
 
-
-    <div class="options mt-4">
-        <a href="#" class="option">
-            <i class="fas fa-syringe"></i>
-            <span>Opções de Vacinação</span>
-        </a>
-        <a href="#" class="option">
-            <i class="fas fa-id-card"></i>
-            <span>Carteirinha de Vacinação</span>
-        </a>
-        <a href="#" class="option">
-            <i class="fas fa-calendar-check"></i>
-            <span>Agendar Vacinação</span>
-        </a>
-        <a href="#" class="option">
-            <i class="fas fa-history"></i>
-            <span>Histórico de Vacinação</span>
-        </a>
-    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="options">
+                    <a href="#" class="option">
+                        <i class="fas fa-syringe"></i>
+                        <span>Opções de Vacinação</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="options">
+                    <a href="#" class="option">
+                        <i class="fas fa-id-card"></i>
+                        <span>Carteirinha de Vacinação</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="options">
+                    <a href="#" class="option">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Agendar Vacinação</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="options">
+                    <a href="#" class="option">
+                        <i class="fas fa-history"></i>
+                        <span>Histórico de Vacinação</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
