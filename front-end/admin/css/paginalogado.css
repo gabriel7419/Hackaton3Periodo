@@ -97,6 +97,7 @@ header .user-options i {
 }
 .option:hover {
     background-color: #45a049;
+    transform: scale(1.05); /** Gabriel que fez **/
 }
 .option i {
     font-size: 3rem;

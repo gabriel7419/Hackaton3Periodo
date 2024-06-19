@@ -81,3 +81,7 @@ header {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.carousel-item img {
+    max-height: 300px; /* Altura máxima das imagens do carousel */
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+}
