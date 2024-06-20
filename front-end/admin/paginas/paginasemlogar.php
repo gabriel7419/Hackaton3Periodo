@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal de Vacinação</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="front-end/admin/css/paginasemlogar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../admin/css/paginasemlogar.css">
 </head>
 
 <body>
@@ -17,26 +17,14 @@
             <div class="row align-items-center">
                 <div class="col-auto">
                     <div class="logo">
-                        <img src="../imagens/logoprincipal.png" alt="Logo do Site">
+                        <img src="../admin/imagens/logoprincipal.png" alt="Logo do Site">
                     </div>
                 </div>
                 <div class="col-auto ms-auto">
-                    <div class="login-options" onclick="toggleLoginPanel()">
-                        <i class="fas fa-sign-in-alt"></i> Login
-                        <div class="login-panel" id="loginPanel">
-                            <!-- Formulário de Login -->
-                            <form action="login.php" method="POST">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email:</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="senha" class="form-label">Senha:</label>
-                                    <input type="password" class="form-control" id="senha" name="senha" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Entrar</button>
-                            </form>
-                        </div>
+                    <div class="login-options">
+                        <button class="btn btn-link" onclick="toggleLoginPanel()">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
                     </div>
                 </div>
             </div>
@@ -55,22 +43,22 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../imagens/cor1.jpg" class="d-block w-100" alt="Imagem 1">
+                    <img src="imagens/cor1.jpg" class="d-block w-100" alt="Imagem 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor2.jpg" class="d-block w-100" alt="Imagem 2">
+                    <img src="imagens/cor2.png" class="d-block w-100" alt="Imagem 2">
                 </div>
                 <div class="carousel-item">
                     <img src="../imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor4.jpg" class="d-block w-100" alt="Imagem 4">
+                    <img src="../imagens/cor4.png" class="d-block w-100" alt="Imagem 4">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor5.jpg" class="d-block w-100" alt="Imagem 5">
+                    <img src="../imagens/cor5.png" class="d-block w-100" alt="Imagem 5">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor6.jpg" class="d-block w-100" alt="Imagem 6">
+                    <img src="../imagens/cor6.png" class="d-block w-100" alt="Imagem 6">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -80,6 +68,22 @@
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Painel de Login -->
+    <div class="login-panel" id="loginPanel">
+        <div class="login-panel-inner">
+            <h2>Escolha o Login</h2>
+            <button class="btn btn-primary" onclick="location.href='paginas/login.php'">
+                <i class="fas fa-user"></i> Login Usuário
+            </button>
+            <button class="btn btn-primary mt-2" onclick="location.href='login_agente.php'">
+                <i class="fas fa-user-tie"></i> Login Agente
+            </button>
+            <button class="btn btn-link mt-3" onclick="toggleLoginPanel()">
+                Cancelar
             </button>
         </div>
     </div>
