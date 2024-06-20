@@ -15,6 +15,7 @@ router.get("/", async (req: Request, res: Response) => {
 
 router.post("/", async (req: Request, res: Response) => {
     try {
+<<<<<<< HEAD
         const { nome } = req.body;
 
         if (!nome) {
@@ -22,11 +23,24 @@ router.post("/", async (req: Request, res: Response) => {
         }
 
         await connection.execute('INSERT INTO agentesaude (nome) VALUES (?)', [nome]);
+=======
+        const agente = req.body;
+
+        if (!agente.nome) {
+            return res.status(400).json({ error: 'O campo "nome" é obrigatório' });
+        }
+
+        await connection.execute('INSERT INTO agentesaude (nome) VALUES (?)', [agente.nome]);
+>>>>>>> 2319c3b568c6423c1f18ecd9563f6aa3a6f0f719
 
         res.status(201).json({ message: "Usuário salvo"});
     } catch (error) {
         console.error("Erro ao salvar usuário:", error);
+<<<<<<< HEAD
         res.status(500).json({ error: 'Ocorreu um erro ao salvar o usuário' }); // Respond with a 500 status and error message
+=======
+        res.status(500).json({ error: 'Ocorreu um erro ao salvar o usuário' });
+>>>>>>> 2319c3b568c6423c1f18ecd9563f6aa3a6f0f719
     }
 });
 

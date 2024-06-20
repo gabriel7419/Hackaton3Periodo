@@ -8,5 +8,10 @@ indent_style = space
 indent_size = 4
 end_of_line = lf
 charset = utf-8
+<<<<<<< HEAD
 trim_trailing_whitespace = true #remove espaços em branco
 insert_final_newline = true #uma linha em branco
+=======
+trim_trailing_whitespace = true
+insert_final_newline = true
+>>>>>>> 2319c3b568c6423c1f18ecd9563f6aa3a6f0f719
