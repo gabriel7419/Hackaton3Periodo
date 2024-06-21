@@ -6,7 +6,7 @@ import routes from './routes'
 const app = express()
 
 app.use(cors())//consumo de api habilitado para outras plataformas
-app.use(express.json())
+app.use(express.json());
 app.use(routes)
 
 

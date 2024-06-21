@@ -22,7 +22,7 @@
     </script>
 
     <div class="login-box">
-        <form action="configLogin.php" method="post">
+        <form action="../configLogin.php" method="post">
             <img src="../imagens/logo.png" alt="" class="logo">
 
             <div class="form-group">
