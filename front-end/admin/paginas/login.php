@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    print_r($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +10,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../admin/css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
@@ -22,8 +26,8 @@
     </script>
 
     <div class="login-box">
-        <form action="configLogin.php" method="post">
-            <img src="../admin/imagens/logo.png" alt="" class="logo">
+        <form action="../configLogin.php" method="post">
+            <img src="../imagens/logo.png" alt="" class="logo">
 
             <div class="form-group">
                 <label for="email">Email</label>
