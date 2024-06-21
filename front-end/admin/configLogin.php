@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
@@ -26,12 +26,14 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $dados);
 $response = curl_exec($ch);
 $data = json_decode($response, true);
 
-//  var_dump($data);
-// exit;
-if ($data['message'] == "existe") {
-    echo "<script>location.href='paginas/paginalogado.php'</script>";
-} else {
+
+if ($data['message'] == "Usuário não encontrado") {
     echo "<script>location.href='paginas/login.php'</script>";
+} else {
+    $_SESSION['datas'] = $data;
+//   var_dump($_SESSION['datas']);
+//  exit;
+    echo "<script>location.href='paginas/paginalogado.php'</script>";
 }
 
 ?>

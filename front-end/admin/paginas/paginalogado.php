@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $data  = $_SESSION['datas'];
+    // var_dump($data )
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,7 +19,7 @@
             <img src="../imagens/logoprincipal.png" alt="Logo do Site">
         </div>
         <div class="user-options" onclick="toggleUserPanel()">
-            <span>Bem-vindo, Usuário</span>
+            <span>Bem-vindo,<?= $data["rows"][0]["nome"] ?? ""?></span>
             <i class="fas fa-user"></i>
             <div class="user-panel" id="userPanel">
                 <a href="#">
