@@ -19,7 +19,7 @@
             <img src="../imagens/logoprincipal.png" alt="Logo do Site">
         </div>
         <div class="user-options" onclick="toggleUserPanel()">
-            <span>Bem-vindo,<?= $data["rows"][0]["nome"] ?? ""?></span>
+            <span>Bem-vindo, <?= $data["rows"][0]["nome"] ?? ""?></span>
             <i class="fas fa-user"></i>
             <div class="user-panel" id="userPanel">
                 <a href="#">
@@ -52,26 +52,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../imagens/cor1.png" class="d-block w-100" alt="Imagem 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="../imagens/cor2.png" class="d-block w-100" alt="Imagem 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="../imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="../imagens/cor4.png" class="d-block w-100" alt="Imagem 4">
-                </div>
-                <div class="carousel-item">
-                    <img src="../imagens/cor5.png" class="d-block w-100" alt="Imagem 5">
-                </div>
-                <div class="carousel-item">
-                    <img src="../imagens/cor6.png" class="d-block w-100" alt="Imagem 6">
-                </div>
-            </div>
+       
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -87,7 +68,7 @@
         <div class="row">
 
             <div class="col">
-                <a href="../config/buscarVacinas.php" class="option">
+                <a href="../listar/vacinas_em_campanha.php" class="option">
                     <i class="fas fa-syringe"></i> <!-- Ícone de injeção -->
                     <span>Campanhas Ativas</span>
                 </a>
@@ -105,12 +86,7 @@
                     <span>Agendar Vacinas</span>
                 </a>
             </div>
-            <div class="col">
-                <a href="../listar/meusagendamentos.php" class="option">
-                    <i class="fas fa-user-nurse"></i>
-                    <span>Meus Agendamentos</span>
-                </a>
-            </div>
+
         </div>
     </div>
 

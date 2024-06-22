@@ -16,8 +16,8 @@ $dados = json_encode([
 ]);
 
 $headers = array(
-    'Content-Type: application/json', // Set the Content-Type header to application/json
-    'Content-Length: ' . strlen($dados) // Set the Content-Length header to the length of the JSON payload
+    'Content-Type: application/json', 
+    'Content-Length: ' . strlen($dados) 
 );
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -28,12 +28,12 @@ $data = json_decode($response, true);
 
 
 if ($data['message'] == "Usuário não encontrado") {
-    echo "<script>location.href='paginas/login.php'</script>";
+    echo "<script>location.href='../paginas/login.php'</script>";
 } else {
     $_SESSION['datas'] = $data;
 //   var_dump($_SESSION['datas']);
 //  exit;
-    echo "<script>location.href='paginas/paginalogado.php'</script>";
+    echo "<script>location.href='../paginas/paginalogado.php'</script>";
 }
 
 ?>

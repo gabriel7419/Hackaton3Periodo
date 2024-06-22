@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -13,25 +14,48 @@
 
 <body>
     <header>
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-auto">
-                    <div class="logo">
-                        <img src="../admin/imagens/logoprincipal.png" alt="Logo do Site">
-                    </div>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="../admin/imagens/logoprincipal.png" alt="Logo do Site">
                 </div>
-                <div class="col-auto ms-auto">
-                    <div class="login-options">
-                        <button class="btn btn-link" onclick="toggleLoginPanel()">
-                            <i class="fas fa-sign-in-alt"></i> Login
-                        </button>
-                    </div>
+                <div class="login-options">
+                    <button class="btn btn-login" onclick="toggleLoginPanel()">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
                 </div>
             </div>
         </div>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
     </header>
 
-    <div class="container">
+    <!-- Painel de Login -->
+    <div class="login-panel" id="loginPanel">
+        <div class="login-panel-inner">
+            <h2>Escolha o Login</h2>
+            <button class="btn btn-primary" onclick="location.href='paginas/login.php'">
+                <i class="fas fa-user"></i> Login Usuário
+            </button>
+            <button class="btn btn-primary mt-2" onclick="location.href='paginasAgente/login_agente.php'">
+                <i class="fas fa-user-tie"></i> Login Agente
+            </button>
+            <button class="btn btn-link mt-3" onclick="toggleLoginPanel()">
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="container mt-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -43,22 +67,22 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="imagens/cor1.jpg" class="d-block w-100" alt="Imagem 1">
+                    <img src="../admin/imagens/cor1.png" class="d-block w-100" alt="Imagem 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="imagens/cor2.png" class="d-block w-100" alt="Imagem 2">
+                    <img src="../admin/imagens/cor2.png" class="d-block w-100" alt="Imagem 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
+                    <img src="../admin/imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor4.png" class="d-block w-100" alt="Imagem 4">
+                    <img src="../admin/imagens/cor4.png" class="d-block w-100" alt="Imagem 4">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor5.png" class="d-block w-100" alt="Imagem 5">
+                    <img src="../admin/imagens/cor5.png" class="d-block w-100" alt="Imagem 5">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor6.png" class="d-block w-100" alt="Imagem 6">
+                    <img src="../admin/imagens/cor6.png" class="d-block w-100" alt="Imagem 6">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -72,55 +96,34 @@
         </div>
     </div>
 
-    <!-- Painel de Login -->
-    <div class="login-panel" id="loginPanel">
-        <div class="login-panel-inner">
-            <h2>Escolha o Login</h2>
-            <button class="btn btn-primary" onclick="location.href='paginas/login.php'">
-                <i class="fas fa-user"></i> Login Usuário
-            </button>
-            <button class="btn btn-primary mt-2" onclick="location.href='login_agente.php'">
-                <i class="fas fa-user-tie"></i> Login Agente
-            </button>
-            <button class="btn btn-link mt-3" onclick="toggleLoginPanel()">
-                Cancelar
-            </button>
-        </div>
-    </div>
-
-    <div class="container mt-4">
+    <!-- Opções -->
+    <div class="container options">
         <div class="row">
+
             <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-syringe"></i>
-                        <span>Opções de Vacinação</span>
-                    </a>
-                </div>
+                <a href="../listar/vacinas_em_campanha.php" class="option">
+                    <i class="fas fa-syringe"></i> <!-- Ícone de injeção -->
+                    <span>Campanhas Ativas</span>
+                </a>
             </div>
             <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-id-card"></i>
-                        <span>Carteirinha de Vacinação</span>
-                    </a>
-                </div>
+                <a href="../listar/historico.php" class="option">
+                    <i class="fas fa-history"></i>
+                    <span>Histórico de Vacinação</span>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="../listar/agendarVacina.php" class="option">
+                    <i class="fas fa-user-md"></i>
+                    <span>Agendar Vacinas</span>
+                </a>
             </div>
             <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Agendar Vacinação</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-history"></i>
-                        <span>Histórico de Vacinação</span>
-                    </a>
-                </div>
+                <a href="#" class="option">
+                    <i class="fas fa-user-nurse"></i>
+                    <span>Meus Agendamentos</span>
+                </a>
             </div>
         </div>
     </div>
@@ -128,20 +131,10 @@
     <script>
         function toggleLoginPanel() {
             var panel = document.getElementById("loginPanel");
-            if (panel.style.display === "block") {
+            if (panel.style.display === "flex") {
                 panel.style.display = "none";
             } else {
-                panel.style.display = "block";
-            }
-        }
-
-        // Fecha o painel de login se o usuário clicar fora dele
-        window.onclick = function(event) {
-            if (!event.target.matches('.login-options') && !event.target.matches('.login-options *')) {
-                var panel = document.getElementById("loginPanel");
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                }
+                panel.style.display = "flex";
             }
         }
     </script>

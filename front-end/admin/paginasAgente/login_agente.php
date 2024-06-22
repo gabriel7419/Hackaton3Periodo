@@ -1,6 +1,5 @@
 <?php 
     session_start();
-    // print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +9,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login_agente.css">
 </head>
 
 <body>
@@ -26,7 +25,7 @@
     </script>
 
     <div class="login-box">
-        <form action="../config/configLoginUsuario.php" method="post">
+        <form action="../config/configLoginAgente.php" method="post">
             <img src="../imagens/logo.png" alt="" class="logo">
 
             <div class="form-group">
@@ -49,20 +48,8 @@
                 </div>
             </div>
 
-            <div class="form-group form-check d-flex justify-content-between">
-                <div>
-                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">Lembrar-me</label>
-                </div>
-                <a href="../paginas/recSenha.php">Esqueci minha senha</a>
-            </div>
-
             <button type="submit" class="btn btn-primary btn-block">Entrar</button>
             <button type="button" class="btn btn-secondary btn-block mt-2" onclick="window.history.back();">Voltar</button>
-
-            <div class="register-link">
-                <p>Não tem uma Conta? <a href="../listar/cadastro.php">Cadastrar-se</a></p>
-            </div>
         </form>
     </div>
 

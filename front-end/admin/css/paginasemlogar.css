@@ -1,49 +1,45 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
     background-color: #62c4d1;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-header .logo img {
-    width: 350px;
-    margin-right: 10px;
+.logo img {
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.7); /* Cor do background com opacidade */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
 }
 
 .login-options {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    text-align: right;
 }
 
-.login-options .btn {
-    color: white;
+.btn-login {
+    background: #fff;
+    color: #6e8efb;
+    border: 2px solid #6e8efb;
+    border-radius: 20px;
+    padding: 5px 20px;
     font-size: 16px;
-    border: none;
-    background: none;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.login-options .btn:hover {
-    color: #f0f0f0;
+.btn-login:hover {
+    background: #6e8efb;
+    color: #fff;
 }
 
 .login-panel {
@@ -53,80 +49,57 @@ header .logo img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semitransparente */
-    z-index: 1000; /* Garante que o painel de login seja o mais alto */
-    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .login-panel-inner {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
+    background: #fff;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.login-panel h2 {
-    font-size: 24px;
+.login-panel-inner h2 {
     margin-bottom: 20px;
 }
 
-.login-panel button {
+.login-panel-inner button {
     width: 100%;
-    margin-top: 10px;
-    padding: 10px; /* Adiciona padding nos botões */
+    margin-bottom: 10px;
 }
 
-.login-panel button i {
-    margin-right: 10px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-}
-
-.cortana {
-    background-color: #e0e0e0;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 2rem;
-    width: 80%;
+.login-panel-inner .btn-link {
+    color: #6e8efb;
 }
 
 .options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem; /* Adiciona margem superior para separar da seção cortana */
 }
 
 .option {
     background-color: #62c4d1;
     color: white;
     border: none;
-    padding: 2rem; /* Aumenta o padding para tornar os botões maiores */
+    padding: 2rem;
     text-align: center;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+    font-size: 1rem;
     margin: 1rem;
     cursor: pointer;
     border-radius: 10px;
-    width: 180px; /* Aumenta a largura dos botões */
-    height: 180px; /* Aumenta a altura dos botões */
-    transition: background-color 0.3s, transform 0.3s;
+    width: 150px;
+    height: 150px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .option:hover {
@@ -137,4 +110,9 @@ header .logo img {
 .option i {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+/* Estilo para o Carousel */
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
 }
