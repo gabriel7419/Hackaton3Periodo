@@ -2,15 +2,15 @@ import { Router, Request, Response } from 'express';
 import knex from '../database/index'
 const router = Router();
 
-// router.get("/", async (req: Request, res: Response) => {
-//     try {
-//         const [result] = await knex.execute('SELECT * FROM agentesaude');
-//         res.status(200).json(result);
-//     } catch (error) {
-//         console.error("Erro ao buscar agentes de saúde:", error);
-//         res.status(500).json({ error: 'Ocorreu um erro ao buscar os dados' });
-//     }
-// });
+router.get("/", async (req: Request, res: Response) => {
+    try {
+      const user = await knex('agentesaude').select("agente");
+      res.status(200).json(user);
+    } catch (error) {
+      console.error("Erro ao buscar agentes de saúde:", error);
+      res.status(500).json({ error: 'Ocorreu um erro ao buscar os dados' });
+    }
+  });
 
 // router.post("/", async (req: Request, res: Response) => {
 //     try {

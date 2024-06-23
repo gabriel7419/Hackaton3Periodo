@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $data  = $_SESSION['datas'];
+    var_dump($data );
+    // exit;
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 

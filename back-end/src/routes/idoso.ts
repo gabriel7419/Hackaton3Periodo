@@ -27,16 +27,4 @@ router.post("/", async (req: Request, res: Response) => {
   }
 });
 
-// routes.get('/',async (req: Request, res: Response) => {
-//     try {
-//         const { email } = req.body;
-
-//         const [result] = await db.execute('SELECT * FROM idoso WHERE emailResponsavel = ?', [email]);
-//         res.status(200).json(result);
-//     } catch (error) {
-//         console.error("Erro ao buscar agentes de saúde:", error);
-//         res.status(500).json({ error: 'Ocorreu um erro ao buscar os dados' });
-//     }
-// });
-
 export default router;

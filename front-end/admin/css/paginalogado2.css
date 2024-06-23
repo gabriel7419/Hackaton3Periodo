@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o header */
+header {
+    background-color: #62c4d1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Adicionado para garantir que o header tenha um contexto de empilhamento */
+}
+
+.logo img {
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Cor do background com opacidade */
+    padding: 10px;
+    /* Espaçamento interno */
+    border-radius: 10px;
+    /* Borda arredondada */
+}
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.btn-user {
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    position: relative; /* Posicionamento adequado do pop-up */
+}
+
+.user-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 160px;
+    z-index: 999; /* Garante que o pop-up esteja acima de todos os elementos */
+}
+
+.user-panel.active {
+    display: block;
+}
+
+.user-panel a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-panel a:hover {
+    background-color: #f4f4f4;
+}
+
+
+.options-panel {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    /* Borda leve */
+    z-index: 2; /* Adicionado para garantir que o painel de opções fique acima de outros elementos */
+    position: relative; /* Necessário para que o z-index funcione */
+}
+
+.options-panel .option {
+    background-color: #62c4d1;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 5px;
+    /* Reduzi a margem entre os botões */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.options-panel .option:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.options-panel .option i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-item img {
+    max-height: 350px; /* Ajuste a altura máxima das imagens do carrossel */
+    object-fit: cover; /* Ajusta o comportamento da imagem para cobrir todo o espaço */
+}

@@ -61,7 +61,7 @@ $vacinas = $_SESSION['vacina'];
                 </thead>
                 <tbody>
                     <?php foreach($vacinas as $info){
-                        // var_dump($info);
+                         
                         for ($i = 0; $i <= count($info); $i++) {
                     ?>  
                     <tr>

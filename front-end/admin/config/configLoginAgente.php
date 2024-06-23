@@ -1,6 +1,6 @@
 <?php
 session_start();
-$email = $_POST['email'];
+$agente = $_POST['agente'];
 $senha = $_POST['senha'];
 
 $url = 'http://localhost:8000/agenteSaude';
@@ -11,7 +11,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 
 $dados = json_encode([
-    'email' => $email,
+    'agente' => $agente,
     'senha' => $senha
 ]);
 

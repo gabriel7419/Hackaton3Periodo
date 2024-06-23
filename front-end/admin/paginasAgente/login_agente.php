@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,12 +30,12 @@
             <img src="../imagens/logo.png" alt="" class="logo">
 
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="text">Agente</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
                     </div>
-                    <input type="email" class="form-control" name="email" id="email" required>
+                    <input type="agente" class="form-control" name="agente" id="agente" required>
                 </div>
             </div>
 
