@@ -1,10 +1,7 @@
-import * as mysql from 'mysql2/promise';
+import config from './../../knex'
 
-const db = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'vacinacao'
-});
+import knex from 'knex'
 
-export default db;
+const conexao = knex(config.development)
+
+export default conexao

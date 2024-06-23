@@ -1,0 +1,77 @@
+/* Estilos para o header */
+header {
+    background-color: #62c4d1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.7); /* Cor do background com opacidade */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+}
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-panel {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.user-panel.active {
+    display: block;
+}
+
+.user-panel a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.user-panel a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para o conteúdo principal */
+.container {
+    max-width: 800px;
+}
+
+.vacinas-list {
+    display: grid;
+    gap: 20px;
+}
+
+.vacina {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vacina h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.vacina p {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    margin-top: 15px;
+}
