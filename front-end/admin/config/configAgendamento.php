@@ -45,10 +45,10 @@ exit;
 if ($resp['message'] == "Agendamento criado com sucesso") {
     echo "chegou aqui";
      exit;
-    echo "<script>location.href='../listar/agendarVacina.php'</script>";
+    echo "<script>location.href='../listar/agendarVacina'</script>";
 } else {
 
-    echo "<script>location.href='../listar/agendarVacina.php'</script>";
+    echo "<script>location.href='../listar/agendarVacina'</script>";
 }
 
 ?>
