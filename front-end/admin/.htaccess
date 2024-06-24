@@ -1,5 +1,4 @@
 RewriteEngine on
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
-#RewriteRule ^(.*?)(front-end|admin)/(.*)$ /$1$3 [L] #removendo algumas palavras chaves
-RewriteRule ^(.*)$ index.php?param=$1
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php

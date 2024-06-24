@@ -1,6 +1,6 @@
 <?php
 session_start();
-$sus = $_POST['sus'];
+$sus = $_POST['cartao_sus'];
 $senha = $_POST['senha'];
 
 $url = 'http://localhost:8000/idoso';
@@ -26,7 +26,9 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $dados);
 $response = curl_exec($ch);
 $data = json_decode($response, true);
 
-
+if ($data['message'] == "Email e senha são obrigatórios") {
+    echo "<script>location.href='../paginas/login.php'</script>";
+} 
 if ($data['message'] == "Usuário não encontrado") {
     echo "<script>location.href='../paginas/login.php'</script>";
 } else {

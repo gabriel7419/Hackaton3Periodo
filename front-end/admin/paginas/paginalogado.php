@@ -1,32 +1,27 @@
-<?php
-    session_start();
-    $data  = $_SESSION['datas'];
-    // var_dump($data );
-    // exit;
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal de Vacinação</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/paginalogado.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/paginalogado.css">
 </head>
+
 <body>
-    <header>
+<header>
         <div class="logo">
             <img src="../imagens/logoprincipal.png" alt="Logo do Site">
         </div>
-        <div class="user-options" onclick="toggleUserPanel()">
-            <span>Bem-vindo,<?= $data['user']['nome'] ?? ""?></span>
-            <i class="fas fa-user"></i>
+        <div class="user-options">
+            <button class="btn btn-user" onclick="toggleUserPanel()">
+                <i class="fas fa-user"></i>
+            </button>
             <div class="user-panel" id="userPanel">
-                <a href="#">
-                    <i class="fas fa-user-edit"></i> Atualizar Cadastro
-                </a>
-                <a href="#">
+                <a href="../logout.php">
                     <i class="fas fa-sign-out-alt"></i> Sair
                 </a>
             </div>
@@ -55,10 +50,10 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../imagens/cor1.png" class="d-block w-100" alt="Imagem 1">
+                    <img src="../imagens/cor1.jpg" class="d-block w-100" alt="Imagem 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor2.png" class="d-block w-100" alt="Imagem 2">
+                    <img src="../imagens/cor2.jpg" class="d-block w-100" alt="Imagem 2">
                 </div>
                 <div class="carousel-item">
                     <img src="../imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
@@ -84,42 +79,49 @@
         </div>
     </div>
 
-    <div class="container options">
+    <div class="container">
         <div class="row">
-
             <div class="col">
-                <a href="../config/buscarVacinas.php" class="option">
-                    <i class="fas fa-syringe"></i> <!-- Ícone de injeção -->
-                    <span>Campanhas Ativas</span>
-                </a>
+                <div class="options-panel">
+                    <a href="../config/buscarVacinas" class="option">
+                        <i class="fas fa-syringe"></i>
+                        <span>Campanhas Ativas</span>
+                    </a>
+                </div>
             </div>
             <div class="col">
-                <a href="../listar/historico.php" class="option">
-                    <i class="fas fa-history"></i>
-                    <span>Histórico de Vacinação</span>
-                </a>
-            </div>
-
-            <div class="col">
-                <a href="../listar/agendarVacina.php" class="option">
-                    <i class="fas fa-user-md"></i>
-                    <span>Agendar Vacinas</span>
-                </a>
+                <div class="options-panel">
+                    <a href="../listar/historico" class="option">
+                        <i class="fas fa-history"></i>
+                        <span>Histórico de Vacinação</span>
+                    </a>
+                </div>
             </div>
             <div class="col">
-                <a href="../listar/meusagendamentos.php" class="option">
-                    <i class="fas fa-user-nurse"></i>
-                    <span>Meus Agendamentos</span>
-                </a>
+                <div class="options-panel">
+                    <a href="../listar/agendarVacina" class="option">
+                        <i class="fas fa-user-md"></i>
+                        <span>Agendar Vacinas</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="options-panel">
+                    <a href="../listar/meusagendamentos" class="option">
+                        <i class="fas fa-user-nurse"></i>
+                        <span>Meus Agendamentos</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
+<script>
         function toggleUserPanel() {
             var panel = document.getElementById("userPanel");
             panel.classList.toggle("active");
         }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

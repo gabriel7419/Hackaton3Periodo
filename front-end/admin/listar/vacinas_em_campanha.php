@@ -21,15 +21,12 @@ $vacinas = $_SESSION['vacina'];
         <div class="logo">
             <img src="../imagens/logoprincipal.png" alt="Logo do Site">
         </div>
-        <div class="user-options">
+         <div class="user-options">
             <button class="btn btn-user" onclick="toggleUserPanel()">
                 <i class="fas fa-user"></i>
             </button>
             <div class="user-panel" id="userPanel">
-                <a href="#">
-                    <i class="fas fa-user-cog"></i> Atualizar Cadastro
-                </a>
-                <a href="#">
+                <a href="../logout.php">
                     <i class="fas fa-sign-out-alt"></i> Sair
                 </a>
             </div>
@@ -61,7 +58,6 @@ $vacinas = $_SESSION['vacina'];
                 </thead>
                 <tbody>
                     <?php foreach($vacinas as $info){
-                         
                         for ($i = 0; $i <= count($info); $i++) {
                     ?>  
                     <tr>
@@ -83,7 +79,7 @@ $vacinas = $_SESSION['vacina'];
 
     </main>
 
-    <script>
+<script>
         function toggleUserPanel() {
             var panel = document.getElementById("userPanel");
             panel.classList.toggle("active");

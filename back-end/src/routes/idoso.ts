@@ -12,7 +12,7 @@ router.post("/", async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Email e senha são obrigatórios' });
     }
 
-    const user = await knex('idoso').select("nome").where({ cartaosus }).first();
+    const user = await knex('idoso').select("id","nome").where({ cartaosus }).first();
 
     if (user) {
       return res.status(200).json({user});

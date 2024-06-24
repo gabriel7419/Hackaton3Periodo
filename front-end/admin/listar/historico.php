@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    $data  = $_SESSION['datas'];
-    var_dump($data );
-    // exit;
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -27,10 +21,7 @@
                 <i class="fas fa-user"></i>
             </button>
             <div class="user-panel" id="userPanel">
-                <a href="#">
-                    <i class="fas fa-user-cog"></i> Atualizar Cadastro
-                </a>
-                <a href="#">
+                <a href="../logout.php">
                     <i class="fas fa-sign-out-alt"></i> Sair
                 </a>
             </div>
@@ -85,7 +76,7 @@
         </button>
     </main>
 
-    <script>
+<script>
         function toggleUserPanel() {
             var panel = document.getElementById("userPanel");
             panel.classList.toggle("active");

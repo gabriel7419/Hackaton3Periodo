@@ -21,12 +21,15 @@
                 <i class="fas fa-user"></i>
             </button>
             <div class="user-panel" id="userPanel">
-                <a href="#">
-                    <i class="fas fa-user-cog"></i> Atualizar Cadastro
-                </a>
-                <a href="#">
+                <a href="../logout.php">
                     <i class="fas fa-sign-out-alt"></i> Sair
                 </a>
+            </div>
+        </div>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
             </div>
         </div>
     </header>
@@ -63,7 +66,7 @@
         </button>
     </main>
 
-    <script>
+<script>
         function toggleUserPanel() {
             var panel = document.getElementById("userPanel");
             panel.classList.toggle("active");

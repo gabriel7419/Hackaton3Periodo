@@ -26,7 +26,9 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $dados);
 $response = curl_exec($ch);
 $data = json_decode($response, true);
 
-
+if ($data['message'] == "Email e senha são obrigatórios") {
+    echo "<script>location.href='../paginasAgente/login_agente.php'</script>";
+}
 if ($data['message'] == "Usuário não encontrado") {
     echo "<script>location.href='../paginasAgente/login_agente.php'</script>";
 } else {

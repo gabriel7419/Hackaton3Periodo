@@ -1,4 +1,23 @@
-
+<?php
+// Definir array de notícias
+$noticias = [
+    [
+        'titulo' => 'Campanha de Vacinação contra a Gripe',
+        'mensagem' => 'A campanha de vacinação contra a gripe começa na próxima semana. Procure o posto de saúde mais próximo.',
+        'imagem' => '../admin/imagens/gripe.jpg'
+    ],
+    [
+        'titulo' => 'Novo Posto de Saúde Inaugurado',
+        'mensagem' => 'Foi inaugurado um novo posto de saúde no bairro Centro. Horário de atendimento 7:30 à 17:30.',
+        'imagem' => '../admin/imagens/posto.jpeg'
+    ],
+    [
+        'titulo' => 'Vacinação contra COVID-19',
+        'mensagem' => 'A vacinação contra a COVID-19 está disponível para todas as faixas etárias. Não deixe de se vacinar.',
+        'imagem' => '../admin/imagens/covid.png'
+    ]
+];
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -42,10 +61,10 @@
     <div class="login-panel" id="loginPanel">
         <div class="login-panel-inner">
             <h2>Escolha o Login</h2>
-            <button class="btn btn-primary" onclick="location.href='paginas/login.php'">
+            <button class="btn btn-primary" onclick="location.href='paginas/login'">
                 <i class="fas fa-user"></i> Login Usuário
             </button>
-            <button class="btn btn-primary mt-2" onclick="location.href='paginasAgente/login_agente.php'">
+            <button class="btn btn-primary mt-2" onclick="location.href='paginasAgente/login_agente'">
                 <i class="fas fa-user-tie"></i> Login Agente
             </button>
             <button class="btn btn-link mt-3" onclick="toggleLoginPanel()">
@@ -67,10 +86,10 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../admin/imagens/cor1.png" class="d-block w-100" alt="Imagem 1">
+                    <img src="../admin/imagens/cor1.jpg" class="d-block w-100" alt="Imagem 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="../admin/imagens/cor2.png" class="d-block w-100" alt="Imagem 2">
+                    <img src="../admin/imagens/cor2.jpg" class="d-block w-100" alt="Imagem 2">
                 </div>
                 <div class="carousel-item">
                     <img src="../admin/imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
@@ -95,39 +114,25 @@
             </button>
         </div>
     </div>
-
-    <!-- Opções -->
-    <div class="container options">
+    <!-- Notícias -->
+    <div class="container mt-5">
+        <h2>Últimas Notícias</h2>
         <div class="row">
-
-            <div class="col">
-                <a href="../listar/vacinas_em_campanha.php" class="option">
-                    <i class="fas fa-syringe"></i> <!-- Ícone de injeção -->
-                    <span>Campanhas Ativas</span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="../listar/historico.php" class="option">
-                    <i class="fas fa-history"></i>
-                    <span>Histórico de Vacinação</span>
-                </a>
-            </div>
-
-            <div class="col">
-                <a href="../listar/agendarVacina.php" class="option">
-                    <i class="fas fa-user-md"></i>
-                    <span>Agendar Vacinas</span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="#" class="option">
-                    <i class="fas fa-user-nurse"></i>
-                    <span>Meus Agendamentos</span>
-                </a>
-            </div>
+            <?php foreach ($noticias as $noticia): ?>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<?= htmlspecialchars($noticia['imagem']) ?>" class="card-img-top" alt="<?= htmlspecialchars($noticia['titulo']) ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= htmlspecialchars($noticia['titulo']) ?></h5>
+                            <p class="card-text"><?= htmlspecialchars($noticia['mensagem']) ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 
+    
     <script>
         function toggleLoginPanel() {
             var panel = document.getElementById("loginPanel");

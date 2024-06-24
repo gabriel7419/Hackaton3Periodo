@@ -30,12 +30,12 @@
             <img src="../imagens/logo.png" alt="" class="logo">
 
             <div class="form-group">
-                <label for="">Catão SUS</label>
+                <label for="cartao_sus">Cartão SUS</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
                     </div>
-                    <input type="sus" class="form-control" name="sus" id="sus" required>
+                    <input type="text" class="form-control" name="cartao_sus" id="cartao_sus" required>
                 </div>
             </div>
 
