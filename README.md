@@ -1,5 +1,11 @@
-# Hackaton3Periodo
+# **ConnectVax**
+### Sistema de Vacinação para Pessoas com Mobilidade Reduzida e Comunidades Isoladas
 
-Projeto de Hackaton da Equipe.
+Esse sistema foi desenvolvido com o objetivo de conectar pessoas com mobilidade reduzida, sejam elas idosas ou pessoas com deficiências físicas, especialmente aquelas que não possuem familaires próximos ou alguém para fornecer esse transporte e comunidades e tribos em locais isolados dos centros médicos com médicos e organizações para que possam levar a imunização até essas pessoas de forma confiável e rápida.
 
-A problemática informava que, para auxiliar pessoas em locais isolados e/ou com pouca mobilidade, como idosos, a se vacinarem contra doenças diversas, surgiu a ideia de criar um sistema - web e desktop - que permite agendamento de vacinação e disponibilidade de contato de médicos. 
+
+
+Funcionalidades:
+
+* Cadastro de usuários/agentes de saúde -> Os usuários e agentes de saúde poderão se cadastrar no sistema fornecendo informações pessoais básicas e de localização.
+  
