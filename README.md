@@ -7,5 +7,5 @@ Esse sistema foi desenvolvido com o objetivo de conectar pessoas com mobilidade 
 
 Funcionalidades:
 
-* Cadastro de usuários -> Os usuários poderão se cadastrar no sistema fornecendo informações pessoais básicas e de localização.
-*  
+* Cadastro de usuários/agentes de saúde -> Os usuários e agentes de saúde poderão se cadastrar no sistema fornecendo informações pessoais básicas e de localização.
+  

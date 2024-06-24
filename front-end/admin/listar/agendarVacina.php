@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Configurar a URL da API
 $url = 'http://localhost:8000/agenteSaude';
@@ -18,23 +17,11 @@ curl_close($ch);
 // Decodificar a resposta JSON
 $agente = json_decode($response, true);
 
-// Verificar se a resposta é válida
-if (json_last_error() !== JSON_ERROR_NONE) {
-    die('Erro ao decodificar a resposta JSON: ' . json_last_error_msg());
-}
-
-// Verificar se os dados de sessão estão definidos
-if (!isset($_SESSION['datas']) || !isset($_SESSION['vacina'])) {
-    die('Dados de sessão não encontrados.');
-}
-
 // Atribuir os dados de sessão a variáveis
 $data = $_SESSION['datas'];
+var_dump($data);
 $vacina = $_SESSION['vacina'];
-
-// Atribuir o array de vacinas a uma variável
-$vacinas = $vacina;
-?>
+?> 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

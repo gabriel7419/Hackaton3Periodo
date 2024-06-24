@@ -30,12 +30,12 @@
             <img src="../imagens/logo.png" alt="" class="logo">
 
             <div class="form-group">
-                <label for="">Catão SUS</label>
+                <label for="email">Email</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                     </div>
-                    <input type="sus" class="form-control" name="sus" id="sus" required>
+                    <input type="email" class="form-control" name="email" id="email" required>
                 </div>
             </div>
 
