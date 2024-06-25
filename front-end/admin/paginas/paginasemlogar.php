@@ -1,3 +1,23 @@
+<?php
+// Definir array de notícias
+$noticias = [
+    [
+        'titulo' => 'Campanha de Vacinação contra a Gripe',
+        'mensagem' => 'A campanha de vacinação contra a gripe começa na próxima semana. Procure o posto de saúde mais próximo.',
+        'imagem' => '../admin/imagens/gripe.jpg'
+    ],
+    [
+        'titulo' => 'Novo Posto de Saúde Inaugurado',
+        'mensagem' => 'Foi inaugurado um novo posto de saúde no bairro Centro. Horário de atendimento 7:30 à 17:30.',
+        'imagem' => '../admin/imagens/posto.jpeg'
+    ],
+    [
+        'titulo' => 'Vacinação contra COVID-19',
+        'mensagem' => 'A vacinação contra a COVID-19 está disponível para todas as faixas etárias. Não deixe de se vacinar.',
+        'imagem' => '../admin/imagens/covid.png'
+    ]
+];
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,42 +28,53 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../css/paginasemlogar.css">
+    <link rel="stylesheet" href="../admin/css/paginasemlogar.css">
 </head>
 
 <body>
     <header>
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-auto">
-                    <div class="logo">
-                        <img src="../imagens/logoprincipal.png" alt="Logo do Site">
-                    </div>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="../admin/imagens/logoprincipal.png" alt="Logo do Site">
                 </div>
-                <div class="col-auto ms-auto">
-                    <div class="login-options" onclick="toggleLoginPanel()">
+                <div class="login-options">
+                    <button class="btn btn-login" onclick="toggleLoginPanel()">
                         <i class="fas fa-sign-in-alt"></i> Login
-                        <div class="login-panel" id="loginPanel">
-                            <!-- Formulário de Login -->
-                            <form action="login.php" method="POST">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email:</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="senha" class="form-label">Senha:</label>
-                                    <input type="password" class="form-control" id="senha" name="senha" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Entrar</button>
-                            </form>
-                        </div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
     </header>
 
-    <div class="container">
+    <!-- Painel de Login -->
+    <div class="login-panel" id="loginPanel">
+        <div class="login-panel-inner">
+            <h2>Escolha o Login</h2>
+            <button class="btn btn-primary" onclick="location.href='paginas/login'">
+                <i class="fas fa-user"></i> Login Usuário
+            </button>
+            <button class="btn btn-primary mt-2" onclick="location.href='paginasAgente/login_agente'">
+                <i class="fas fa-user-tie"></i> Login Agente
+            </button>
+            <button class="btn btn-link mt-3" onclick="toggleLoginPanel()">
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="container mt-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -55,22 +86,22 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../imagens/cor1.jpg" class="d-block w-100" alt="Imagem 1">
+                    <img src="../admin/imagens/cor1.jpg" class="d-block w-100" alt="Imagem 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor2.jpg" class="d-block w-100" alt="Imagem 2">
+                    <img src="../admin/imagens/cor2.jpg" class="d-block w-100" alt="Imagem 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
+                    <img src="../admin/imagens/cor3.png" class="d-block w-100" alt="Imagem 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor4.jpg" class="d-block w-100" alt="Imagem 4">
+                    <img src="../admin/imagens/cor4.png" class="d-block w-100" alt="Imagem 4">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor5.jpg" class="d-block w-100" alt="Imagem 5">
+                    <img src="../admin/imagens/cor5.png" class="d-block w-100" alt="Imagem 5">
                 </div>
                 <div class="carousel-item">
-                    <img src="../imagens/cor6.jpg" class="d-block w-100" alt="Imagem 6">
+                    <img src="../admin/imagens/cor6.png" class="d-block w-100" alt="Imagem 6">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -83,61 +114,32 @@
             </button>
         </div>
     </div>
-
-    <div class="container mt-4">
+    <!-- Notícias -->
+    <div class="container mt-5">
+        <h2>Últimas Notícias</h2>
         <div class="row">
-            <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-syringe"></i>
-                        <span>Opções de Vacinação</span>
-                    </a>
+            <?php foreach ($noticias as $noticia): ?>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<?= htmlspecialchars($noticia['imagem']) ?>" class="card-img-top" alt="<?= htmlspecialchars($noticia['titulo']) ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= htmlspecialchars($noticia['titulo']) ?></h5>
+                            <p class="card-text"><?= htmlspecialchars($noticia['mensagem']) ?></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-id-card"></i>
-                        <span>Carteirinha de Vacinação</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Agendar Vacinação</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="options">
-                    <a href="#" class="option">
-                        <i class="fas fa-history"></i>
-                        <span>Histórico de Vacinação</span>
-                    </a>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 
+    
     <script>
         function toggleLoginPanel() {
             var panel = document.getElementById("loginPanel");
-            if (panel.style.display === "block") {
+            if (panel.style.display === "flex") {
                 panel.style.display = "none";
             } else {
-                panel.style.display = "block";
-            }
-        }
-
-        // Fecha o painel de login se o usuário clicar fora dele
-        window.onclick = function(event) {
-            if (!event.target.matches('.login-options') && !event.target.matches('.login-options *')) {
-                var panel = document.getElementById("loginPanel");
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                }
+                panel.style.display = "flex";
             }
         }
     </script>

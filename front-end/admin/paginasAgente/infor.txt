@@ -1,0 +1,4 @@
+//TODO adicionar campanha, na area de campanha ativa
+//TODO vai visualizar o historio do cara que ele pegar o id 
+//TODO 
+//TODO ver todos os agendamento que o agente tem  
